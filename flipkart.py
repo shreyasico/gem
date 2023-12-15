@@ -51,4 +51,4 @@ def get_flipkart_price(product_name):
 try:
     get_flipkart_price(sys.argv[1])
 except:
-    get__price(sys.argv)      
+    get_flipkart_price(sys.argv)      
