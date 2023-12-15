@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Price Comparison</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    
+</head>
+<body>
+    <h1>Product Price Comparison</h1>
+    <form id="priceForm">
+        <label for="product_name">Enter Product Name:</label>
+        <input type="text" id="product_name" name="product_name" required>
+        <button type="button" onclick="getPrices()">Get Prices</button>
+    </form>
+    
+    <div id="result"></div>
+
+    <script>
+        function getPrices() {
+            var productName = document.getElementById('product_name').value;
+
+            fetch('/get_prices', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: new URLSearchParams({ 'product_name': productName }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('result').innerHTML = `
+                    <h2>Prices</h2>
+                    <p>Amazon: ${data.amazon_price}</p>
+                    <p>Flipkart: ${data.flipkart_price}</p>
+                    <p>GEM: ${data.gem_price}</p>
+                `;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('result').innerHTML = '<p>Error fetching prices.</p>';
+            });
+        }
+    </script>
+</body>
+</html>

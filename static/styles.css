@@ -1,0 +1,63 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+#priceForm {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    margin-bottom: 12px;
+    width: 200px;
+}
+
+button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#result {
+    margin-top: 20px;
+    text-align: left;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#result h2 {
+    color: #333;
+}
+
+#result p {
+    font-size: 14px;
+    margin: 8px 0;
+    color: #333;
+}
+
+#result .error {
+    color: #ff0000;
+}
