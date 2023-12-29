@@ -48,7 +48,8 @@ def get_gem_price(product_name):
         # Extract the relevant information
         # Note: The method to find the price or other details will depend on how the website displays them
         price = driver.find_element(By.CLASS_NAME,'variant-final-price').text.replace('₹','').replace(',','')  # Replace with actual selector
-        print(f"Price of '{product_name} on GEM is': {price}")
+        product_url = driver.current_url
+        print(f"Price of '{product_name}': ₹{price}")
 
     except NoSuchElementException as e:
         print("Error occurred.")

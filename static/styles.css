@@ -1,21 +1,53 @@
 /* styles.css */
 
-body {
-    font-family: 'Arial', sans-serif;
+#title{
+    background-color:#164863;
+    color:#fff;
+}
+
+
+ body {
+    font-family: 'Montserrat',sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color:#DDF2FD;
     text-align: center;
-}
+} 
+
+
+ /* h1 {
+    color: #164863;
+    font-family:"Urbanist", sans-serif;
+    margin: 100px;
+    padding: 100px;
+    
+}  */
 
 h1 {
-    color: #333;
+    color: #164863; /* A calming shade of blue */
+    font-family: "Montserrat", sans-serif; 
+    line-height:5rem;
+    font-weight:700;
+    margin: 30px 0; /* Slightly reduced top and bottom margin for better spacing */
+    padding: 30px;
+    text-align: center;
+    letter-spacing: 2px; /* Add some letter spacing for a modern look */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow for depth */
+    background-color: #fff; /* A light background color for contrast */
+
 }
 
-#priceForm {
+
+
+ #priceForm {
     margin-top: 20px;
-}
+    font-family:"Urbanist", sans-serif;
+    font-weight:bold;
+    text-align: center;
 
+}  
+
+ 
 label {
     display: block;
     font-size: 16px;
@@ -29,35 +61,153 @@ input {
     border: 1px solid #ccc;
     margin-bottom: 12px;
     width: 200px;
+    font-family: "urbanist", sans-serif;
 }
 
-button {
-    padding: 12px;
+/* button { */
+    /* padding: 12px;
     font-size: 16px;
     background-color: #4caf50;
     color: #fff;
     border: none;
     cursor: pointer;
+     */
+/* } */
+
+     
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #4caf50; /* Set the default green background color */
+    color: #fff; /* Set the text color */
+    cursor: pointer;
+    border: none; /* Remove border */
+    outline: none; /* Remove outline */
+    font-family: "Urbanist", sans-serif;
+
+    /* Transition for a smooth hover effect */
+    transition: background-color 0.3s ease;
 }
 
-#result {
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+    
+
+
+ #result {
     margin-top: 20px;
     text-align: left;
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
-}
+} 
 
-#result h2 {
-    color: #333;
+
+
+#result h1{
+    color: #164863;
 }
 
 #result p {
     font-size: 14px;
-    margin: 8px 0;
-    color: #333;
+    margin: 20px 0;
+    color: #164863;
 }
 
 #result .error {
     color: #ff0000;
+}
+
+
+
+
+
+/* features */
+
+.feature-title{
+    font-size:1.5rem;
+}
+
+#features{
+    padding: 7% 15%;
+    background-color:#fff;
+    position: relative;
+    z-index:0;
+}
+
+.feature-box{
+    text-align:center;
+}
+
+.icon{
+    color:#427D9D;
+    margin-bottom:1rem;
+}
+
+.icon:hover{
+    color:#164863;
+}
+
+
+
+#testimonials{
+
+    padding: 7% 15%;
+    text-align:center;
+    background-color:#9BBEC8;
+    color:#fff;
+}
+
+.testimonial-image{
+    width:10%;
+    border-radius:100%;
+}
+
+.carousel-item{
+    padding:7% 15%;
+
+}
+
+
+#press{
+    background-color:#427D9D;
+    text-align:center;
+    padding-bottom:3%;
+}
+
+.press-logo{
+    width:15%;
+    margin:20px 20px 15px;
+}
+
+
+#footer{
+    padding: 7% 15%;
+    text-align:center;
+}
+
+.social-icon{
+    margin:20px 10px;
+}
+
+@media(max-width:992px){
+
+    #title{
+        text-align:center;
+    }
+    .title-image{
+        top:4rem;
+        left:5%;
+        position:relative;
+        transform:rotate(25);
+        height:auto;
+        width:60%;
+    }
 }

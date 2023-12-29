@@ -26,19 +26,21 @@ def get_flipkart_price(product_name):
             pass  # No pop-up appeared
 
         # Find the search bar, enter the product name, and submit
+        time.sleep(10)
         search_bar = driver.find_element("name","q")
         search_bar.send_keys(product_name)
         search_bar.send_keys(Keys.RETURN)
 
         # Wait for the page to load
-        time.sleep(2)
+        time.sleep(10)
 
         # Find and print the price of the first product in search results
         try:
             price = driver.find_element('xpath','/html/body/div/div/div[3]/div[1]/div[2]/div[2]/div/div[1]/div/a[3]/div/div[1]').text.replace('₹','').replace(',','')
         except:
             price = driver.find_element('css selector','._1_WHN1').text.replace('₹','').replace(',','')
-        print(f"Price of '{product_name}': {price}")
+        product_url = driver.current_url
+        print(f"Price of '{product_name}': ₹{price}")
 
     except (NoSuchElementException, ElementClickInterceptedException) as e:
         print("Error occurred.")
